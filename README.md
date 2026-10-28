@@ -4,7 +4,7 @@ A neon 3D falling-block puzzle that installs as an app and runs with no network.
 Three.js WebGL playfield, camera orbit/zoom, animated line-clear explosions, a
 synthesized 8-bit soundtrack, and modern stacking rules.
 
-**Live:** _(add your Vercel URL here)_
+**Live:** <https://neon.robs.ws>
 
 ## Play
 
@@ -72,7 +72,10 @@ deployment: `index.html` at the site root, no build step, no server code.
 
 ### Vercel
 
-The CLI is pinned as a dev dependency, so no global install is needed:
+Production is <https://neon.robs.ws>, served from this repo. Pushes to `main` deploy
+automatically through the Vercel Git integration, so a commit is a release.
+
+The CLI is also pinned as a dev dependency, for manual deploys and previews:
 
 ```bash
 npm install          # once
