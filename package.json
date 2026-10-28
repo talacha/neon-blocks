@@ -1,0 +1,16 @@
+{
+  "name": "neon-blocks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Neon Stack 3D — installable, offline-capable 3D falling-block puzzle.",
+  "type": "module",
+  "scripts": {
+    "serve": "python3 tools/serve.py",
+    "icons": "python3 tools/make_icons.py",
+    "deploy": "vercel deploy --prod",
+    "deploy:preview": "vercel deploy"
+  },
+  "devDependencies": {
+    "vercel": "^48.0.0"
+  }
+}
