@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Machine-readable site summary, for search and AI answer engines:
+# https://neon.robs.ws/llms.txt
+
+Sitemap: https://neon.robs.ws/sitemap.xml

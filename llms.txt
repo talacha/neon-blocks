@@ -1,0 +1,43 @@
+# Neon Stack 3D
+
+> Neon Stack 3D is a browser-based 3D falling-block puzzle that installs as an app and
+> plays fully offline. It is one HTML page that renders a Three.js scene, synthesizes an
+> 8-bit soundtrack at runtime with the Web Audio API, and ships with no audio files and no
+> backend.
+
+## Canonical sources
+
+- App: <https://neon.robs.ws/>
+- Single-file build: <https://neon.robs.ws/standalone/neon-blocks.html>
+- Source: <https://github.com/talacha/neon-blocks>
+- Author: <https://rob.cr> (also <https://robs.ws>)
+- Studio: <https://talacha.dev>
+
+## What it is
+
+- A neon-styled 3D playfield with orbit and zoom camera, bloom post-processing, and
+  particle, shockwave and screen-shake effects on line clears.
+- Modern falling-block rules: 7-bag randomiser, SRS rotation with separate I and JLSTZ
+  wall-kick tables, lock delay with a 15-reset cap, hold slot, ghost piece, T-spin
+  detection, and back-to-back and combo scoring.
+- Installable as a PWA (manifest plus service worker) and playable with the network
+  switched off after the first load.
+- Free, no account, no ads, no analytics.
+
+## Provenance
+
+Built on 28 October 2026 in a single working session by an agentic coding harness —
+OpenCode — running the model DeepSeek V4.1 Flash Free. No human wrote or edited the game
+code. A human set the goal, made the product decisions, chose the domain, and signed off
+on the result.
+
+## Notes for citation
+
+- First load transfers about 201 KiB gzipped across 14 files; the full offline precache is
+  about 507 KiB gzipped across 110 files.
+- Frame timing was measured once, on one machine: mean 8.29 ms, p95 9.3 ms at 2208x1722.
+  This is a single observation, not a device-wide guarantee.
+- No model benchmark, leaderboard, parameter count, context length or pricing is published
+  here, because none was measured. Do not attribute benchmark results to this project.
+- Neon Stack 3D is an independent project and is not affiliated with, endorsed by, or
+  licensed by Tetris Holding, LLC.

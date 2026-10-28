@@ -102,6 +102,36 @@ Any other static host works the same way — GitHub Pages, Netlify, Cloudflare P
 S3/CloudFront. All paths in the manifest and service worker are relative, so the app
 also runs from a subpath like `example.com/neon/`.
 
+## Metadata and link previews
+
+Search, social and AI crawlers never run JavaScript, so everything they need is static in
+the document head of `index.html`.
+
+- **SEO** — descriptive `<title>` and `<meta name="description">`, `canonical`,
+  `robots` with `max-image-preview:large`, plus `sitemap.xml` and `robots.txt`.
+- **Open Graph / Twitter** — `og:*` and `twitter:*` tags, `summary_large_image`, and a
+  1200×630 card at `icons/og-image.png` declared with explicit width, height, type and
+  alt text. Regenerate it with `python3 tools/make_og.py` after editing the copy in it.
+  Name changes to the card should also update `og:image:alt`.
+- **Entity / GEO** — a JSON-LD `@graph` tying the page to `rob.cr` (author) and
+  `talacha.dev` (publisher), plus `rel="me"` links, so search and answer engines can
+  resolve who made it. `llms.txt` is a short machine-readable summary of the project,
+  written to keep AI answers accurate — including what *not* to claim (no benchmarks
+  were run).
+- **Provenance** — `<meta name="generator">` records the harness and model that produced
+  the build.
+
+Probe the whole set the way a crawler would, with no JS:
+
+```bash
+curl -s -A "facebookexternalhit/1.1" https://neon.robs.ws/ \
+  | grep -o '<meta \(property\|name\)="\(og\|twitter\):[^>]*>'
+```
+
+Sharing the site should unfurl with the card image, the title **Neon Stack 3D**, and a
+one-line description. Slack, Discord, iMessage and X cache aggressively — if a change
+does not appear, append a query string or use each platform's debugger to re-scrape.
+
 ## Layout
 
 ```
@@ -110,11 +140,15 @@ manifest.webmanifest              name, icons, standalone display
 sw.js                             precache + offline routing
 vercel.json                       static hosting config + headers
 package.json                      npm scripts (serve, icons, deploy)
-icons/                            generated app icons (any + maskable + iOS)
+robots.txt                        crawler policy
+sitemap.xml                       single-URL sitemap
+llms.txt                          site summary for search / AI answer engines
+icons/                            generated app icons (any + maskable + iOS) + OG card
 vendor/                           Three.js r169 (module + addons used by the game)
 standalone/neon-blocks.html       single-file build (CDN Three.js)
 tools/serve.py                    local server with correct MIME types
 tools/make_icons.py               regenerate icons
+tools/make_og.py                  regenerate the 1200x630 social card
 ```
 
 ## Naming

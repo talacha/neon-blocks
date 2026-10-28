@@ -1,6 +1,6 @@
 /* Neon Stack 3D service worker — precaches the whole game for offline play.
    Bump CACHE when shipping changes; the old cache is deleted on activate. */
-const CACHE = 'neon-blocks-v5';
+const CACHE = 'neon-blocks-v6';
 const ASSETS = [
   './',
   './index.html',

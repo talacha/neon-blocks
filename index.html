@@ -4,29 +4,115 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#04060c" />
-<meta name="description" content="Neon 3D falling-block puzzle with modern rules, 8-bit audio and full offline play." />
+<meta name="description" content="A neon 3D falling-block puzzle with modern rules, an 8-bit soundtrack generated in the browser, and full offline play. Installs as an app." />
+<meta name="keywords" content="falling block puzzle, 3D puzzle game, browser game, offline game, installable web app, PWA, 7-bag, SRS, T-spin, chiptune" />
+<meta name="author" content="Rob" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="generator" content="OpenCode (DeepSeek V4.1 Flash Free)" />
+<meta name="color-scheme" content="dark" />
 <link rel="canonical" href="https://neon.robs.ws/" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Site summary for AI agents" />
+<link rel="me" href="https://rob.cr" />
+<link rel="me" href="https://robs.ws" />
+<link rel="author" href="https://rob.cr" />
+
+<!-- Open Graph / link unfurls -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Neon Stack 3D" />
-<meta property="og:title" content="Neon Stack 3D" />
-<meta property="og:description" content="Neon 3D falling-block puzzle with modern rules, 8-bit audio and full offline play." />
+<meta property="og:locale" content="en_US" />
 <meta property="og:url" content="https://neon.robs.ws/" />
-<meta property="og:image" content="https://neon.robs.ws/icons/icon-512.png" />
-<meta property="og:image:width" content="512" />
-<meta property="og:image:height" content="512" />
-<meta property="og:image:alt" content="Neon Stack 3D app icon" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:title" content="Neon Stack 3D" />
+<meta property="og:description" content="Modern falling-block rules — 7-bag, SRS kicks, T-spins, combos — an 8-bit soundtrack synthesized in the browser, and full offline play. Installs as an app." />
+<meta property="og:image" content="https://neon.robs.ws/icons/og-image.png" />
+<meta property="og:image:secure_url" content="https://neon.robs.ws/icons/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Neon Stack 3D title card: glowing neon blocks on a dark background, credits to rob.cr and talacha.dev" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Neon Stack 3D" />
-<meta name="twitter:description" content="Neon 3D falling-block puzzle with modern rules, 8-bit audio and full offline play." />
-<meta name="twitter:image" content="https://neon.robs.ws/icons/icon-512.png" />
+<meta name="twitter:description" content="Modern falling-block rules — 7-bag, SRS kicks, T-spins, combos — an 8-bit soundtrack synthesized in the browser, and full offline play. Installs as an app." />
+<meta name="twitter:image" content="https://neon.robs.ws/icons/og-image.png" />
+<meta name="twitter:image:alt" content="Neon Stack 3D title card: glowing neon blocks on a dark background, credits to rob.cr and talacha.dev" />
+
+<!-- Structured data: entity + provenance graph for search and answer engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://neon.robs.ws/#website",
+      "url": "https://neon.robs.ws/",
+      "name": "Neon Stack 3D",
+      "alternateName": "Neon Stack",
+      "description": "A neon 3D falling-block puzzle with modern rules, an 8-bit soundtrack generated in the browser, and full offline play.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://talacha.dev/#organization" },
+      "creator": { "@id": "https://rob.cr/#person" }
+    },
+    {
+      "@type": ["WebApplication", "VideoGame"],
+      "@id": "https://neon.robs.ws/#game",
+      "name": "Neon Stack 3D",
+      "url": "https://neon.robs.ws/",
+      "description": "A neon 3D falling-block puzzle with modern rules — 7-bag randomiser, SRS wall kicks, hold, ghost piece, T-spins, back-to-back and combo scoring — with an 8-bit soundtrack synthesized at runtime and full offline play.",
+      "applicationCategory": "GameApplication",
+      "applicationSubCategory": "Puzzle",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript. Plays offline after the first load.",
+      "isAccessibleForFree": true,
+      "inLanguage": "en",
+      "datePublished": "2026-10-28",
+      "genre": "Puzzle",
+      "gamePlatform": "Web browser",
+      "playMode": "SinglePlayer",
+      "image": "https://neon.robs.ws/icons/og-image.png",
+      "screenshot": "https://neon.robs.ws/icons/og-image.png",
+      "featureList": [
+        "7-bag randomiser",
+        "SRS rotation with wall kicks",
+        "Lock delay with move reset",
+        "Hold slot and ghost piece",
+        "T-spin, back-to-back and combo scoring",
+        "Orbit and zoom 3D camera",
+        "Runtime-synthesized 8-bit soundtrack",
+        "Installable and playable offline"
+      ],
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://rob.cr/#person" },
+      "publisher": { "@id": "https://talacha.dev/#organization" },
+      "isPartOf": { "@id": "https://neon.robs.ws/#website" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://rob.cr/#person",
+      "name": "Rob",
+      "url": "https://rob.cr",
+      "sameAs": ["https://rob.cr", "https://robs.ws"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://talacha.dev/#organization",
+      "name": "Talacha.dev",
+      "url": "https://talacha.dev"
+    }
+  ]
+}
+</script>
+
 <link rel="manifest" href="./manifest.webmanifest" />
+<meta name="application-name" content="Neon Stack 3D" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Neon Stack" />
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon-180.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
-<title>NEON STACK 3D</title>
+<title>Neon Stack 3D — a neon falling-block puzzle that plays offline</title>
 <style>
   :root{
     --cyan:#37e6ff;

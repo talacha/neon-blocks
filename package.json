@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "python3 tools/serve.py",
     "icons": "python3 tools/make_icons.py",
+    "og": "python3 tools/make_og.py",
     "deploy": "vercel deploy --prod",
     "deploy:preview": "vercel deploy"
   },

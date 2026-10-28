@@ -1,7 +1,9 @@
 {
   "name": "Neon Stack 3D",
   "short_name": "Neon Stack",
-  "description": "Neon 3D falling-block puzzle with modern rules, 8-bit audio and full offline play.",
+  "description": "A neon 3D falling-block puzzle with modern rules, an 8-bit soundtrack generated in the browser, and full offline play.",
+  "lang": "en",
+  "dir": "ltr",
   "id": "./",
   "start_url": "./",
   "scope": "./",
