@@ -1695,7 +1695,7 @@ window.addEventListener('keydown', e => {
     case 'ArrowRight': pressRight(); break;
     case 'ArrowDown': held.down = true; S.softDrop = true; S.softAcc = 0; break;
     case 'ArrowUp': case 'KeyX': tryRotate(1); break;
-    case 'KeyZ': tryRotate(-1); break;
+    case 'KeyZ': case 'ControlLeft': case 'ControlRight': tryRotate(-1); break;
     case 'Space': hardDrop(); break;
     case 'KeyC': case 'ShiftLeft': case 'ShiftRight': doHold(); break;
   }
